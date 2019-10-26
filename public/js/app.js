@@ -24,7 +24,7 @@ event.preventDefault()
  const locations = searchv.value
  
 //  console.log(locations)
-fetch('http://localhost:4000/weather?address='+ locations).then((response) => {
+fetch('/weather?address='+ locations).then((response) => {
     response.json().then((data) => {
         if (data.error) {
             console.log(data.error)

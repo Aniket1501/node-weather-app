@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const port = process.env.PORT || 4000
 
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
@@ -117,6 +118,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(4000,()=>{
-    console.log("the server is running at 4000")
+app.listen(port,()=>{
+    console.log("the server is running at " + port)
 })
