@@ -22,6 +22,8 @@ weatherform.addEventListener('submit',(event) => {
 event.preventDefault()
 
  const locations = searchv.value
+ msg1.textContent = "LOADING......."
+ msg2.textContent = ""
  
 //  console.log(locations)
 fetch('/weather?address='+ locations).then((response) => {

@@ -23,7 +23,7 @@ app.use(express.static(pathdic))
 app.get('/',(req,res)=>
 {
     res.render('index',{
-        title: "weather",
+        title: "Weather",
          name : "Aniket Gupta"
 
     })
@@ -41,9 +41,9 @@ app.get('/help',(req,res)=>
 {
     res.render('help',{
         title: "help",
-        helpText: 'This is some helpful text.',
+        helpText: '[DEMO] This is some helpful text.',
     
-        name : "aniket"
+        name : "Aniket Gupta"
     })
 })
 
@@ -53,7 +53,7 @@ app.get('/weather',(req,res)=>{
     if(!req.query.address)
    { 
       return res.send({
-           error: "must provide adress"
+           error: "must provide location"
        })
    }
    
@@ -101,7 +101,7 @@ app.get('/products',(req,res)=>{
 app.get('/help/*',(req,res)=>{
     res.render('error',{
         title: '404',
-        name: 'aniket',
+        name: 'Aniket Gupta',
         errorMessage : "page not founnd"
     })
 
@@ -110,7 +110,7 @@ app.get('/help/*',(req,res)=>{
 app.get('*',(req,res)=>{
     res.render('error',{
         title: '404',
-        name: 'aniket',
+        name: 'Aniket Gupta',
         errorMessage : "my 404 error"
     })
 
