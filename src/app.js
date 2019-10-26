@@ -24,7 +24,7 @@ app.get('/',(req,res)=>
 {
     res.render('index',{
         title: "weather",
-         name : "aniket"
+         name : "Aniket Gupta"
 
     })
 })
@@ -34,7 +34,7 @@ app.get('/about',(req,res)=>
     res.render('about',{
         title: "About",
         name:"gupta",
-        name : "kkkkkk"
+        name : "Aniket Gupta"
     })
 })
 app.get('/help',(req,res)=>
